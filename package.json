@@ -9,14 +9,14 @@
     "/dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "_build": "tsc",
     "build": "parcel build src/index.ts",
     "report": "parcel build src/index.ts --detailed-report 20 --reporter @parcel/reporter-bundle-analyzer",
     "watch": "parcel watch",
-    "publish-lib": "npm run build && npm publish",
-    "publish-beta": "npm run build && npm publish --tag beta",
-    "publish-dryrun": "npm run build && npm publish --dry-run"
+    "publish-lib": "jest && yarn run build && yarn publish",
+    "publish-dryrun": "jest && yarn run build && yarn publish --dry-run",
+    "clean": "rimraf dist .parcel-cache"
   },
   "repository": {
     "type": "git",
@@ -37,11 +37,14 @@
   },
   "homepage": "https://github.com/bersling/typescript-library-starter#readme",
   "devDependencies": {
-    "@parcel/optimizer-esbuild": "^2.0.1",
     "@parcel/packager-ts": "^2.0.1",
     "@parcel/reporter-bundle-analyzer": "^2.0.1",
     "@parcel/transformer-typescript-types": "^2.0.1",
-    "parcel": "^2.0.1"
+    "@types/jest": "^27.0.3",
+    "jest": "^27.4.5",
+    "parcel": "^2.0.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.1.2"
   },
   "dependencies": {
     "typescript": "4.5.4"
@@ -50,5 +53,8 @@
     "main": {
       "optimize": true
     }
+  },
+  "jest": {
+    "preset": "ts-jest"
   }
 }
