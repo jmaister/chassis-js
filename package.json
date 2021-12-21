@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bersling/typescript-library-starter.git"
+    "url": "git+https://github.com/jmaister/chassis-js.git"
   },
   "keywords": [
     "VIN",
@@ -33,9 +33,9 @@
   "author": "Jordi Burgos <jordiburgos@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bersling/typescript-library-starter/issues"
+    "url": "https://github.com/jmaister/chassis-js/issues"
   },
-  "homepage": "https://github.com/bersling/typescript-library-starter#readme",
+  "homepage": "https://github.com/jmaister/chassis-js",
   "devDependencies": {
     "@parcel/packager-ts": "^2.0.1",
     "@parcel/reporter-bundle-analyzer": "^2.0.1",
