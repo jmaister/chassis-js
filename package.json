@@ -2,6 +2,7 @@
   "name": "chassis-js",
   "version": "1.0.0",
   "description": "VIN (Vehicle Identification Number) decoder library. Also known as chassis number.",
+  "source": "src/index.ts",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -9,7 +10,10 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
+    "_build": "tsc",
+    "build": "parcel build src/index.ts",
+    "report": "parcel build src/index.ts --detailed-report 20 --reporter @parcel/reporter-bundle-analyzer",
+    "watch": "parcel watch",
     "publish-lib": "npm run build && npm publish",
     "publish-beta": "npm run build && npm publish --tag beta",
     "publish-dryrun": "npm run build && npm publish --dry-run"
@@ -19,10 +23,12 @@
     "url": "git+https://github.com/bersling/typescript-library-starter.git"
   },
   "keywords": [
-    "demo",
-    "typescript",
-    "library",
-    "hello world"
+    "VIN",
+    "vehicle",
+    "identification",
+    "number",
+    "chassis",
+    "chassis number"
   ],
   "author": "Jordi Burgos <jordiburgos@gmail.com>",
   "license": "MIT",
@@ -30,8 +36,19 @@
     "url": "https://github.com/bersling/typescript-library-starter/issues"
   },
   "homepage": "https://github.com/bersling/typescript-library-starter#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "@parcel/optimizer-esbuild": "^2.0.1",
+    "@parcel/packager-ts": "^2.0.1",
+    "@parcel/reporter-bundle-analyzer": "^2.0.1",
+    "@parcel/transformer-typescript-types": "^2.0.1",
+    "parcel": "^2.0.1"
+  },
   "dependencies": {
     "typescript": "4.5.4"
+  },
+  "targets": {
+    "main": {
+      "optimize": true
+    }
   }
 }
