@@ -1,7 +1,7 @@
 
 # Chassis-JS
 
-Library to parse VIN (Vehicle Identification Number) from cars.
+Library to parse and decode VIN (Vehicle Identification Number) from cars.
 
 Also known as chassis number.
 
