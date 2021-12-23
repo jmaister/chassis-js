@@ -219,3 +219,11 @@ const getRegions = () => {
 
 export const countriesMap = getCountries();
 export const regionMap = getRegions();
+
+export const getCountry = (wmi: string) => {
+    return countriesMap[wmi.substring(0, 2)];
+};
+
+export const getRegion = (wmi:string) => {
+    return regionMap[wmi.substring(0, 1)];
+};

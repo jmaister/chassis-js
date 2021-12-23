@@ -1,2 +1,2 @@
-export {sayHello, sayGoodbye} from './hello-world'
+export {parseVIN, splitVIN} from "./vin";
 
