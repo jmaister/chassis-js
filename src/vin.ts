@@ -1,3 +1,4 @@
+import { getManufacturer } from "./manufacturer";
 import { getCountry, getRegion } from "./region";
 import { getYears } from "./year";
 
@@ -14,6 +15,7 @@ export interface VINInfo {
     region: string;
     country: string;
     years: number[];
+    manufacturer: string;
 }
 
 export function parseVIN(vin: string): ParseResult {
@@ -32,6 +34,7 @@ export function parseVIN(vin: string): ParseResult {
     const region = getRegion(split.wmi);
     const country = getCountry(split.wmi);
     const years = getYears(split.yearCode);
+    const manufacturer = getManufacturer(split.wmi);
 
     return {
         vin,
@@ -41,6 +44,7 @@ export function parseVIN(vin: string): ParseResult {
             region,
             country,
             years,
+            manufacturer,
         },
     } as ParseResult;
 }
@@ -80,6 +84,8 @@ export interface Split {
 
     yearCode: string;
 
+    manufacturer: string;
+
     /*
     // European Union <=500v/year
     euroLessThan500: boolean
@@ -95,7 +101,7 @@ export interface Split {
 
     // North America <=2000v/year
     manufacturerIdentifier: string
-    // sequentalNumber: string
+    // sequentialNumber: string
     */
 }
 

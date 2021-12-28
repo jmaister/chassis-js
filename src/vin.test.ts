@@ -12,4 +12,5 @@ test("Get basic VIN info", () => {
     expect(result.info.years.length).toBe(2);
     expect(result.info.years).toContain(1982);
     expect(result.info.years).toContain(2012);
+    expect(result.info.manufacturer).toBe("BMW");
 });
