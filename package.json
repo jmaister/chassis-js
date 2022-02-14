@@ -41,7 +41,7 @@
     "@parcel/reporter-bundle-analyzer": "^2.2.1",
     "@parcel/transformer-typescript-types": "^2.2.1",
     "@types/jest": "^27.4.0",
-    "jest": "^27.5.0",
+    "jest": "^27.5.1",
     "parcel": "^2.2.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.1.3"
