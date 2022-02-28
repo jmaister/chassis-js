@@ -1137,12 +1137,12 @@
     "@parcel/utils" "^2.2.1"
     posthtml "^0.16.4"
 
-"@parcel/packager-ts@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@parcel/packager-ts/-/packager-ts-2.2.1.tgz#fdc31e574b9a5d1d8bc524087383ecc12f710781"
-  integrity sha512-MSiV7hTTMo+QzzxfjqEjzMXTz0IJ09WOZ126AKe8jL7fYL9lp8H1ha+wGeH1gDq+EHjgIANFcjFuC1MdY2J+1Q==
+"@parcel/packager-ts@^2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@parcel/packager-ts/-/packager-ts-2.3.2.tgz#e2092e89bd7ee48b7b217ab9c4374c7ceef17e13"
+  integrity sha512-8Yb0N8Rnvj4Ag+jd2nTJPSrUKZxFEqju77cTRkkg4jFSNSFw8GTRsappNAyCID0W1tjcTyxMTfxetPmCC1Xm9g==
   dependencies:
-    "@parcel/plugin" "^2.2.1"
+    "@parcel/plugin" "2.3.2"
 
 "@parcel/plugin@2.3.2", "@parcel/plugin@^2.2.1":
   version "2.3.2"
